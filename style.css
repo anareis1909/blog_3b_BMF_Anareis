@@ -1,0 +1,23 @@
+:root {
+--cor-primaria: #DC4F7C;
+--cor-fundo: #FCE9AB;
+--cor-texto: #3E2723;
+--cor-contraste: #FC8A2D;
+--cor-botao: #C42B34;
+}
+
+body {
+max-width: 100vw;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+back-ground-color: var(--cor-primaria);
+color: var(--cor-contraste);
+text-align: center;
+margin: 0 auto;
+padding: 16px;
+
+
+
+}
