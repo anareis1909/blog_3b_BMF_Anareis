@@ -27,5 +27,8 @@ const idCard = `card-${indice + 1}`;
 const chaveBotaoUM = `${idCard}-botaoUM`;
 const chaveBotaoDOIS = `${idCard}-botaoDOIS`;
 
+let UM = Number(localStorage.getItem(chaveBotaoUM)) || 0;
+
+
  })
 }
