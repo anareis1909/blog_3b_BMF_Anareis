@@ -33,5 +33,13 @@ let DOIS = Number(localStorage.getItem(chaveBotaoDOIS)) || 0;
 contadorBotaoUM.textContent = UM;
 contadorBotaoDOIS.textContent = DOIS;
 
+botaoUM.addEventListener("click", () =>{
+    UM++; 
+    contadorBotaoUM.textContent = UM;
+
+
+    localStorage.setItem()
+})
+
  })
 }
