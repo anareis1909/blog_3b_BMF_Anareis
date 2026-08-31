@@ -38,7 +38,20 @@ botaoUM.addEventListener("click", () =>{
     contadorBotaoUM.textContent = UM;
 
 
-    localStorage.setItem()
+    localStorage.setItem(
+chaveBotaoUM, UM
+
+    );
+
+    botaoDOIS.addEventListener("click", () =>{
+    UM++; 
+    contadorBotaoDOIS.textContent = DOIS;
+
+
+    localStorage.setItem(
+chaveBotaoDOIS, DOIS
+
+    );
 })
 
  })
