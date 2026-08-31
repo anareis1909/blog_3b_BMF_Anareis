@@ -22,5 +22,10 @@ const botaoDOIS = botoes[1];
 const contadorBotaoUM = botaoUM.querySelector("span");
 const contadorBotaoDOIS = botaoDOIS.querySelector("span");
 
+const idCard = `card-${indice + 1}`;
+
+const chaveBotaoUM = `${idCard}-botaoUM`;
+const chaveBotaoDOIS = `${idCard}-botaoDOIS`;
+
  })
 }
