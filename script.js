@@ -18,5 +18,9 @@ if (botoes.lenght < 2) {
 const botaoUM = botoes[0];
 const botaoDOIS = botoes[1];
 
+
+const contadorBotaoUM = botaoUM.querySelector("span");
+const contadorBotaoDOIS = botaoDOIS.querySelector("span");
+
  })
 }
