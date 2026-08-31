@@ -15,6 +15,8 @@ if (botoes.lenght < 2) {
     
 }
 
+const botaoUM = botoes[0];
+const botaoDOIS = botoes[1];
 
  })
 }
