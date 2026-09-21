@@ -12,20 +12,18 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-header {
-    background-color: #DC4F7C;
-    color: #FCE9AB;
+   header {
+    background-color: #F7A8C4;
+    color: #3E2723;
     text-align: center;
 
     width: 80%;
     margin: 30px auto;
-    padding: 35px 20px;
+    padding: 30px 25px;
 
-    border-radius: 20px;
-    box-shadow: 4px 6px 0px #3E2723;
+    border-radius: 15px;
     border: 3px solid #DC4F7C;
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 4px 5px 0px #DC4F7C;
 }
 
 header:hover {
