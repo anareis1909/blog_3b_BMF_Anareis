@@ -40,16 +40,15 @@ article {
     align-items: center;
     justify-content: center;
     background-color: #FCE9AB;
+      transition: transform 0.2s ease;
 }
+
+article:hover {
+    transform: translateY(-10px);
+}
+
 
 img {
     width: 80px;
     height: 80px;
-}
-.card {
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
 }
