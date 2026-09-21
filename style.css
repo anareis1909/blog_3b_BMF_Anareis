@@ -7,8 +7,9 @@
 }
 
 body {
-max-width: 100vw;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 100vw;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header {
@@ -33,7 +34,7 @@ header:hover {
 }
 
 main{
-background-color: var (--cor-fundo);
+background-color: var(--cor-fundo);
 color: var(--cor-primaria);
 margin: 0 auto;
 padding: 16px;
