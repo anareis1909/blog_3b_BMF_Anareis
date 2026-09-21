@@ -22,15 +22,15 @@ header {
     padding: 35px 20px;
 
     border-radius: 20px;
-    box-shadow: 4px 6px 0px #C42B34;
-    border: 3px solid #FC8A2D;
+    box-shadow: 4px 6px 0px #3E2723;
+    border: 3px solid #DC4F7C;
 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 header:hover {
     transform: translateY(-5px);
-    box-shadow: 6px 10px 0px #C42B34;
+    box-shadow: 6px 10px 0px #f593d7;
 }
 
 main {
