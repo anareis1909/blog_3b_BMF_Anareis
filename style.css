@@ -1,9 +1,9 @@
 :root {
---cor-primaria: #DC4F7C;
---cor-fundo: #FCE9AB;
---cor-texto: #3E2723;
---cor-contraste: #FC8A2D;
---cor-botao: #C42B34;
+    --cor-primaria: #DC4F7C;
+    --cor-fundo: #FCE9AB;
+    --cor-texto: #3E2723;
+    --cor-contraste: #FC8A2D;
+    --cor-botao: #C42B34;
 }
 
 body {
@@ -33,13 +33,13 @@ header:hover {
     box-shadow: 6px 10px 0px #C42B34;
 }
 
-main{
-background-color: var(--cor-fundo);
-color: var(--cor-primaria);
-margin: 0 auto;
-padding: 16px;
-display: flex;
-flex-wrap: wrap;
+main {
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 article {
@@ -55,13 +55,12 @@ article {
     justify-content: center;
     background-color: #FCE9AB;
 
-      transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 article:hover {
     transform: translateY(-10px);
 }
-
 
 img {
     width: 80px;
