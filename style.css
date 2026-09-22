@@ -96,3 +96,90 @@ img {
   font-weight: bold;
 }
 }
+
+/* ============================= /
+/ ✨ BRILHOS DO CABEÇALHO ✨ /
+/ ============================= */
+
+header {
+position: relative;
+overflow: hidden;
+}
+
+/* Brilhos */
+
+header::before,
+header::after {
+content: "✦";
+position: absolute;
+
+color: white;
+font-size: 25px;
+
+opacity: 0;
+
+pointer-events: none;
+
+
+}
+
+/* Primeiro brilho */
+
+header::before {
+left: 15%;
+bottom: 10px;
+
+animation: brilho 3s infinite ease-in-out;
+
+
+}
+
+/* Segundo brilho */
+
+header::after {
+right: 15%;
+top: 15px;
+
+font-size: 18px;
+
+animation: brilho 3s infinite ease-in-out 1.5s;
+
+
+}
+
+/* Animação */
+
+@keyframes brilho {
+
+0% {
+    opacity: 0;
+    transform: scale(0) translateY(20px);
+}
+
+30% {
+    opacity: 1;
+    transform: scale(1.2) translateY(0);
+}
+
+60% {
+    opacity: 1;
+    transform: scale(1) translateY(-10px);
+}
+
+100% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-30px);
+}
+
+
+}
+
+/* Brilho extra ao passar o mouse */
+
+header:hover::before {
+animation-duration: 1.5s;
+}
+
+header:hover::after {
+animation-duration: 1.5s;
+}
