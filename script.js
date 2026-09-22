@@ -1,58 +1,34 @@
-document.addEventListener("DOMContentLoaded", () =>{
-prepararReacoes();
-prepararAnimacaoCard();
-criarBotaoTopo();
-})
-
-function prepararReacoes() {
-const artigos = document.querySelectorAll("article");
-
 artigos.forEach((artigo, indice) => {
 
-const botoes = artigo.quuerySelectorAll("Button");
-if (botoes.lenght < 2) {
-    return;
-    
-}
+    const botao = artigo.querySelector(".like-button");
 
-const botaoUM = botoes[0];
-const botaoDOIS = botoes[1];
+    if (!botao) {
+        return;
+    }
 
+    const contador = botao.querySelector(".like-count");
 
-const contadorBotaoUM = botaoUM.querySelector("span");
-const contadorBotaoDOIS = botaoDOIS.querySelector("span");
+    if (!contador) {
+        return;
+    }
 
-const idCard = `card-${indice + 1}`;
+    const chave = `curtidas-artigo-${indice + 1}`;
 
-const chaveBotaoUM = `${idCard}-botaoUM`;
-const chaveBotaoDOIS = `${idCard}-botaoDOIS`;
+    let curtidas = Number(localStorage.getItem(chave)) || 0;
 
-let UM = Number(localStorage.getItem(chaveBotaoUM)) || 0;
-let DOIS = Number(localStorage.getItem(chaveBotaoDOIS)) || 0;
+    contador.textContent = curtidas;
 
-contadorBotaoUM.textContent = UM;
-contadorBotaoDOIS.textContent = DOIS;
+    botao.addEventListener("click", () => {
+        curtidas++;
 
-botaoUM.addEventListener("click", () =>{
-    UM++; 
-    contadorBotaoUM.textContent = UM;
+        contador.textContent = curtidas;
 
+        localStorage.setItem(chave, curtidas);
 
-    localStorage.setItem(
-chaveBotaoUM, UM
+        botao.classList.add("liked");
 
-    );
-
-    botaoDOIS.addEventListener("click", () =>{
-    UM++; 
-    contadorBotaoDOIS.textContent = DOIS;
-
-
-    localStorage.setItem(
-chaveBotaoDOIS, DOIS
-
-    );
-})
-
- })
-}
+        setTimeout(() => {
+            botao.classList.remove("liked");
+        }, 300);
+    });
+});
