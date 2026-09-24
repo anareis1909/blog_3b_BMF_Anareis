@@ -1,3 +1,443 @@
+:root {
+    --cor-primaria: #DC4F7C;
+    --cor-fundo: #FCE9AB;
+    --cor-texto: #3E2723;
+    --cor-contraste: #FC8A2D;
+    --cor-botao: #C42B34;
+}
+
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    /* Evita rolagem enquanto a introdução aparece */
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   ✨ TELA DE INTRODUÇÃO ✨
+================================ */
+
+#intro {
+    position: fixed;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        #F7A8C4,
+        #FCE9AB,
+        #FC8A2D
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    overflow: hidden;
+
+    animation: desaparecerIntro 1.2s ease-in-out 3s forwards;
+}
+
+
+/* Conteúdo da introdução */
+
+.intro-conteudo {
+    text-align: center;
+    color: var(--cor-texto);
+
+    position: relative;
+    z-index: 2;
+
+    animation: aparecerIntro 1.3s ease-out;
+}
+
+
+/* Pequeno texto */
+
+.intro-pequeno {
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #8E304F;
+
+    margin-bottom: 10px;
+
+    animation: subirTexto 1s ease-out;
+}
+
+
+/* Título */
+
+.intro-titulo {
+    font-size: clamp(40px, 8vw, 80px);
+
+    margin: 0;
+
+    color: #DC4F7C;
+
+    text-shadow:
+        3px 3px 0px white,
+        5px 5px 0px rgba(196, 43, 52, 0.25);
+
+    animation: tituloIntro 1.2s ease-out;
+}
+
+
+/* Subtítulo */
+
+.intro-subtitulo {
+    font-size: clamp(18px, 3vw, 26px);
+
+    margin-top: 15px;
+
+    color: var(--cor-texto);
+
+    animation: subirTexto 1.4s ease-out;
+}
+
+
+/* Linha decorativa */
+
+.intro-linha {
+    width: 0;
+    height: 4px;
+
+    background-color: var(--cor-botao);
+
+    border-radius: 10px;
+
+    margin: 25px auto;
+
+    animation: linhaIntro 1.5s ease-out forwards;
+}
+
+
+/* Mensagem final */
+
+.intro-mensagem {
+    font-size: 16px;
+
+    color: #6d4037;
+
+    opacity: 0;
+
+    animation: aparecerMensagem 1s ease 1s forwards;
+}
+
+
+/* ================================
+   ✨ BRILHOS DA INTRODUÇÃO
+================================ */
+
+.intro-brilho {
+    position: absolute;
+
+    color: white;
+
+    font-size: 35px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.brilho-1 {
+    top: 20%;
+    left: 15%;
+
+    animation: brilhoIntro 3s infinite 0.2s;
+}
+
+.brilho-2 {
+    top: 30%;
+    right: 18%;
+
+    font-size: 25px;
+
+    animation: brilhoIntro 3s infinite 1s;
+}
+
+.brilho-3 {
+    bottom: 20%;
+    left: 25%;
+
+    font-size: 22px;
+
+    animation: brilhoIntro 3s infinite 1.7s;
+}
+
+.brilho-4 {
+    bottom: 25%;
+    right: 25%;
+
+    font-size: 32px;
+
+    animation: brilhoIntro 3s infinite 2.2s;
+}
+
+
+/* ================================
+   ✨ CÍRCULOS DECORATIVOS
+================================ */
+
+.intro-circulo {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.25);
+
+    filter: blur(1px);
+}
+
+.circulo-1 {
+    width: 180px;
+    height: 180px;
+
+    top: -60px;
+    left: -40px;
+}
+
+.circulo-2 {
+    width: 250px;
+    height: 250px;
+
+    bottom: -100px;
+    right: -70px;
+}
+
+.circulo-3 {
+    width: 100px;
+    height: 100px;
+
+    top: 15%;
+    right: 5%;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    background-color: #F7A8C4;
+    color: #3E2723;
+    text-align: center;
+
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px 25px;
+
+    border-radius: 15px;
+    border: 3px solid #DC4F7C;
+
+    box-shadow: 4px 5px 0px #DC4F7C;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 10px 0px #f593d7;
+}
+
+
+/* ================================
+   ✨ BRILHOS DO CABEÇALHO
+================================ */
+
+header::before,
+header::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: white;
+
+    font-size: 25px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* Primeiro brilho */
+
+header::before {
+    left: 15%;
+    bottom: 10px;
+
+    animation: brilho 3s infinite ease-in-out;
+}
+
+
+/* Segundo brilho */
+
+header::after {
+    right: 15%;
+    top: 15px;
+
+    font-size: 18px;
+
+    animation: brilho 3s infinite ease-in-out 1.5s;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+main {
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+
+    margin: 0 auto;
+    padding: 16px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* ================================
+   ARTIGOS / CARDS
+================================ */
+
+article {
+    display: flex;
+
+    box-shadow: 2px 2px 10px rgba(227, 170, 253, 0.616);
+
+    margin: 16px;
+
+    gap: 16px;
+
+    padding: 16px;
+
+    flex: 1 1 25%;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #FCE9AB;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+article:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        4px 10px 20px rgba(220, 79, 124, 0.25);
+}
+
+
+/* ================================
+   IMAGENS
+================================ */
+
+img {
+    width: 80px;
+    height: 80px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+article img:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 5px 15px rgba(220, 79, 124, 0.3);
+}
+
+
+/* ================================
+   ❤️ BOTÃO DE CURTIDA
+================================ */
+
+.like-container {
+    display: flex;
+
+    justify-content: center;
+
+    margin: 20px 0;
+}
+
+
+.like-button {
+    border: none;
+
+    background: #fff;
+
+    color: #333;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.15);
+
+    transition: 0.2s;
+}
+
+
+.like-button:hover {
+    transform: scale(1.05);
+}
+
+
+.like-button.liked {
+    color: #e63946;
+
+    background: #ffecef;
+}
+
+
+#likeCount {
+    margin-left: 6px;
+
+    font-weight: bold;
+}
+
+
 /* ================================
    ✨ ANIMAÇÃO DOS BRILHOS DO HEADER
 ================================ */
@@ -224,3 +664,5 @@ header:hover::after {
 
     .intro-brilho {
         font-size: 22px;
+    }
+}
