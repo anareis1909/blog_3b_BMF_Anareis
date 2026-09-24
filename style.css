@@ -325,7 +325,7 @@ main {
 article {
     display: flex;
 
-    box-shadow: 2px 2px 10px rgba(227, 170, 253, 0.616);
+    box-shadow: 2px 2px 10px rgba(255, 246, 71, 0.616);
 
     margin: 16px;
 
