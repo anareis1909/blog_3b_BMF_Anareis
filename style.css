@@ -68,7 +68,7 @@ body {
 
 /* Pequeno texto */
 
-.intro-pequeno {
+.intro-pequeno { Sejam bem vindos ao 
     font-size: 18px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -83,7 +83,7 @@ body {
 
 /* Título */
 
-.intro-titulo {
+.intro-titulo {Blog do 3B
     font-size: clamp(40px, 8vw, 80px);
 
     margin: 0;
